@@ -26,8 +26,8 @@ class App extends Component{
     e.preventDefault()
     const url = 'http://btc.blockr.io/api/v1/address/txs/'
 
-    // fetch(url + this.state.input)
-    fetch('http://btc.blockr.io/api/v1/address/txs/198aMn6ZYAczwrE5NvNTUMyJ5qkfy4g3Hi')
+    fetch(url + this.state.input)
+    // fetch('http://btc.blockr.io/api/v1/address/txs/198aMn6ZYAczwrE5NvNTUMyJ5qkfy4g3Hi')
     .then(info =>info.json())
     .then(info => this.props.handleGetHistory(info.data))
     .catch(err => console.log(err))
